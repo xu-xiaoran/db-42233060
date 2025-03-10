@@ -18,11 +18,20 @@
 
 1. 找到位于`成都`市的支行的名字。
 
-$$\pi_{branch\_name}(\sigma_{branch\_city='成都'}(branch))$$
+$\pi_{branch_{-}name}(\sigma_{branch_{-}city='成都'}(branch))$
+
 
 2. 找到在`杨柳`支行有贷款（`loan`）的借款人（`borrower`）的ID。
 
-$$\pi_{ID}(\sigma_{branch\_name='杨柳'}(loan)\bowtie borrower)$$
+$\pi_{ID}(\sigma_{branch_{-}name='杨柳'}(loan\bowtie borrower))$
 
 ## 题目二（3分）
 假设数据库中存储用户名和密码的关系模式是 users(name, pswd, gender)，请结合关系代数简述实现`用户登录`逻辑的思路。
+
+用户登录过程中，系统验证输入的用户名、密码和性别是否与数据库中储存的记录相匹配，假设用户输入的用户名为**name1**，密码为**pswd1**，性别为**gender1**。
+如果
+
+$\sigma_{name = name1\land pswd = pswd1\land gender=gender1}(users)$
+
+若表达式返回的关系非空，则说明数据库中存在与用户输入匹配的记录，则登录成功；反之则登录失败。
+
