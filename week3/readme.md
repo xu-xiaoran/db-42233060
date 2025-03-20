@@ -40,7 +40,7 @@ WHERE instructor.name = '图灵';
 ```
 ## 题目三（2分）
 考虑题目二提到的关系模式，请问下面的SQL语句的含义是什么？
-# 查找工资高于会计学院所有教师的教师姓名，并确保没有重复值。
+### 答：查找工资高于会计学院所有教师的教师姓名，并确保没有重复值。
 ```sql
 SELECT DISTINCT T.name
 FROM instructor AS T, instructor AS S
